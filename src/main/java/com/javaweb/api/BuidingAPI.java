@@ -30,9 +30,9 @@ public class BuidingAPI {
 //    private BuidingServiceImpl buidingServiceImpl = new BuidingServiceImpl();
 	
 	@GetMapping(value = "/api/building/")
-	public  List<BuidingDTO> getBuilding(@RequestParam(name="name") String Name) {
+	public  List<BuidingDTO> getBuilding(@RequestParam(name="name") String name) {
 		
-		List<BuidingDTO> listBuidingDTO = buidingService.findAll(Name);
+		List<BuidingDTO> listBuidingDTO = buidingService.findAll(name);
 
 		return listBuidingDTO;
 	}
